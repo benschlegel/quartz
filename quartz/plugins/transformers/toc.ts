@@ -67,4 +67,10 @@ declare module "vfile" {
   interface DataMap {
     toc: TocEntry[]
   }
+  interface ExtendedDataMap extends DataMap {
+    frontmatter: DataMap["frontmatter"] & {
+      newProperty: string
+      anotherNewProperty: number[]
+    }
+  }
 }
